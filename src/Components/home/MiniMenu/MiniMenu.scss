@@ -1,0 +1,125 @@
+@import "../../../const/variables.scss";
+
+.miniMenuContainer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 4rem;
+
+    #subtitle {
+        font-size: 2.5rem;
+        font-family: $montserrat;
+        color: $purple;
+    }
+
+    .buttonsContainer {
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button {
+            position: relative;
+            width: 30vw;
+            font-size: 3.5rem;
+            font-family: $montserrat;
+            color: white;
+            background: none;
+            font-weight: 100;
+            letter-spacing: 2px;
+            border: none;
+            padding: 5rem 0;
+            cursor: pointer;
+            transition: 300ms;
+
+            opacity: .3;
+
+            &:hover{
+                opacity: 1;
+                letter-spacing: 4px;
+            }
+            
+            
+            .top-1,
+            .bottom-1{
+                width: 12rem;
+            }
+
+            .top-1{
+                position: absolute;
+                height: 1px;
+                background: white;
+                top: 0;
+                right: 0;
+                opacity: 0;
+                transform-origin: left;
+                transform: rotateY(90deg);
+                transition: 500ms;
+
+            }
+
+            .top-1-active{
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+
+            .top-2{
+                position: absolute;
+                height: 25%;
+                width: 1px;
+                background: white;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                transform-origin: top;
+                transform: rotateX(90deg);
+                transition: 300ms;
+            }
+
+            .top-2-active{
+                transform: rotateX(0deg);
+                opacity: 1;
+            }
+
+            .bottom-1{
+                position: absolute;
+                height: 1px;
+                background: white;
+                bottom: 0;
+                left: 0;
+                transition: 500ms;
+                transform: rotateY(90deg);
+                opacity: 0;
+                transform-origin: right;
+            }
+            
+            .bottom-1-active{
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+
+            .bottom-2{
+                position: absolute;
+                height: 25%;
+                width: 1px;
+                background: white;
+                left: 0;
+                bottom: 0;
+                transform-origin: bottom;
+                opacity: 0;
+                transform: rotateX(90deg);
+                transition: 300ms;
+            }
+
+            .bottom-2-active{
+                transform: rotateX(0deg);
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+@import "../../../const/variables.scss";
+
+.workingAsContainer {
+    background: $darkblue;
+    padding-top: 15vw;
+    padding-bottom: 10vw;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10vw;
+        background: linear-gradient(to bottom, transparent, white, transparent);
+    }
+
+    .workingAsElementsContainer {
+        height: 150vh; //change
+        width: 100%;
+
+        #movingBox {
+            position: sticky;
+            top: 20vh;
+            width: 60vw;
+
+            margin-left: 50%;
+            transform: translateX(-50%);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding-top: 100px;
+
+            .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-weight: 700;;
+
+                gap: 20px;
+
+                font-size: 1.1rem;
+
+
+                &>span {
+                    width: max-content;
+                    color: $purple;
+                    font-family: $montserrat;
+                }
+
+                #rotatingTextContainer {
+                    padding: 5px 30px 2px 30px;
+                    border-bottom: 2px solid white;
+
+
+
+                    #rotatingText {
+                        text-align: center;
+                        font-family: $alfa;
+                        font-weight: lighter;
+                        width: 180px;
+                        transform-style: preserve-3d;
+                        transform-origin: top;
+                    }
+                }
+
+
+            }
+
+            #manAndWoman {
+                svg{
+                    max-width: 100%;
+                }
+
+                #woman,
+                #plant {
+                    transition: 500ms;
+                    transform: translateX(0vw);
+                    opacity: 1;
+                }
+
+                #man {
+                    transition: 700ms;
+                    transform: translateX(0vw);
+                }
+            }
+
+            .onlyMan {
+                #woman{
+                    transform: translateX(5vw) !important;
+                    opacity: 0 !important;
+                }
+
+                #plant{
+                    transform: translateX(20%) !important;
+                }
+
+                #man {
+                    transform: translateX(20%) !important;
+                }
+
+
+            }
+        }
+    }
+
+    margin-bottom: 20vh;
+}
+
+@keyframes textSwitch {
+
+    0%,
+    100% {
+        transform: rotateX(0deg);
+    }
+
+    45%,
+    55% {
+        transform: rotateX(90deg);
+    }
+}

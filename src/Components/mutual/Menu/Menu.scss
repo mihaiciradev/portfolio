@@ -1,0 +1,107 @@
+@import '../../../const/variables.scss';
+
+.menuContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: rgba(115, 56, 211, .97);
+    z-index: 75;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: opacity 200ms;
+
+
+    button{
+        position: relative;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 50vw;
+        padding: 5vh 0;
+        font-size: 2em;
+
+        transition: 300ms;
+
+        &:focus,
+        &:active{
+            outline: none;
+            color: white;
+            letter-spacing: 3px;
+        }
+
+        &:hover{
+            letter-spacing: 3px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50vw;
+            height:1px;
+
+            background: white;
+        }
+    }
+}
+
+
+.menuButton {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    background: $purple;
+    padding: 7px 5px 4px 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    z-index: 80;
+
+    & * {
+        transition: 200ms;
+    }
+
+    #topline{
+        transform-origin: top;
+    }
+    #bottomline{
+        transform-origin: bottom;
+    }
+}
+
+.intermediaryState {
+    #topline {
+        transform: translateY(8.7px);
+    }
+
+    #bottomline {
+        transform: translateY(-8.7px);
+    }
+
+    #midline {
+        opacity: 0;
+    }
+}
+
+.openedState {
+    #topline {
+        transform: translateY(9px) rotateZ(45deg) scale(.9);
+    }
+
+    #bottomline {
+        transform: translateY(-10px) rotateZ(-45deg) scale(.9);
+    }
+
+    #midline {
+        opacity: 0;
+    }
+}

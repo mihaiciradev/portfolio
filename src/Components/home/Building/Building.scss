@@ -1,0 +1,27 @@
+@import "../../../const/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.buildingContainer{
+    position: relative;
+    h1{
+        position: absolute;
+        top: 5.7em;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 4rem;
+        font-family: 'Alfa Slab One', cursive;
+        font-weight: 100;
+        letter-spacing: 3px;
+    }
+}
+#buildingSection{
+    height: max-content;
+    transform: translateY(-2%);
+    width: 100%;
+
+    #building-vertical-line{
+        transform: translateX(.3%);
+    }
+}

@@ -1,0 +1,81 @@
+@import "../../../const/variables.scss";
+
+.aboutContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 664px;
+
+    gap: 4rem;
+
+    &>.bioText,
+    &>div {
+        width: 30rem;
+
+        transition: 500ms;
+
+        p,
+        ul,
+        li {
+            margin: 0;
+        }
+    }
+
+    #aboutVerticalLine {
+        transform: translateY(-1%);
+        width: 1px;
+        height: 100%;
+        background: white;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: .7cm;
+            height: .7cm;
+            border-radius: 100%;
+            transform: translateX(-50%) translateY(-45%);
+            background-color: white;
+        }
+    }
+
+    #aboutSvgSlider {
+        position: absolute;
+        top: -1px;
+        right: 0;
+    }
+
+    .aboutMoreContainer {
+        position: absolute;
+        left: 85%;
+        bottom: 0;
+        border-bottom: 1px solid white;
+        width: max-content;
+        cursor: pointer;
+        z-index: 100;
+        opacity: .4;
+
+        &:hover {
+            transform: translateX(10%);
+            opacity: 1;
+        }
+
+        span {
+            padding: 0 10px 0 10px;
+            font-family: $montserrat;
+            width: max-content;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(135deg, transparent 0% 50%, white 51%);
+            transform: translateY(50%) rotateZ(45deg);
+        }
+    }
+}
