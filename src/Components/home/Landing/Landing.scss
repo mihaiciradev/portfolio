@@ -105,14 +105,14 @@
     width: inherit;
 
     #bike{
-        animation: 15s bike_move_anim linear infinite;
+        animation: 10s bike_move_anim linear infinite;
     }
 }
 
 
 @keyframes bike_move_anim{
     from{
-        transform: translateX(1800%);
+        transform: translateX(1400%);
     }
     to{
         transform: translateX(-100%);

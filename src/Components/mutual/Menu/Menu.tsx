@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Menu.scss';
 
 const ButtonSvg = () => {
@@ -12,7 +13,7 @@ const ButtonSvg = () => {
 }
 
 
-const OpenedMenu = () => {
+const OpenedMenu = ({ closeMenu, changeState }: any) => {
 
     const [isTransparent, setIsTransparent] = useState<boolean>(true)
 
@@ -27,12 +28,29 @@ const OpenedMenu = () => {
         }
     }, [])
 
+    const navigate = useNavigate();
+
+    const openPage = (id: string) => {
+        switch(id){
+            case '':
+                navigate('/');
+                break;
+            default:
+                navigate('/' + id)
+                closeMenu(false);
+                break;
+        }
+        changeState();
+        window.scrollTo(0, 0);
+    }
+
+
     return <div className="menuContainer" style={{ 'opacity': isTransparent ? '0' : '1' }}>
-        <button>Home</button>
-        <button>About</button>
-        <button>Skills</button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <button onClick={() => { openPage('') }}>Home</button>
+        {/* <button onClick={() => { openPage('about') }}>About</button> */}
+        <button onClick={() => { openPage('skills') }}>Skills</button>
+        <button onClick={() => { openPage('projects') }}>Projects</button>
+        {/* <button onClick={() => { openPage('/#contact') }}>Contact</button> */}
     </div>
 }
 
@@ -43,6 +61,7 @@ function Menu() {
     const changeState = () => {
         if (isMenuOpened) {
             //then close it
+
 
             if (!buttonRef.current?.classList.contains('openedState')) return;
 
@@ -73,7 +92,7 @@ function Menu() {
         <div className={`menuButton`} onClick={changeState} ref={buttonRef}>
             <ButtonSvg />
         </div>
-        {isMenuOpened && <OpenedMenu />}
+        {isMenuOpened && <OpenedMenu closeMenu={setIsMenuOpened} changeState={changeState} />}
     </>
 
 

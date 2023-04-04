@@ -3,7 +3,9 @@ import { Route } from 'react-router';
 import { Routes } from 'react-router-dom';
 import './App.scss';
 import Menu from './Components/mutual/Menu/Menu';
-import Home from './Components/pages/home/Home';
+import Home from './Components/home/Home';
+import Skills from './Components/skills/Skills';
+import About from './Components/about/About';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Menu/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
+        <Route path="/skills" element={<Skills/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
       </Routes>
     </div>
   );

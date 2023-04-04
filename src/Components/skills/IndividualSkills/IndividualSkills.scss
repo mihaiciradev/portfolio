@@ -1,0 +1,62 @@
+@import "../../../const/variables.scss";
+
+.individualSkillsContainer {
+    margin-top: 3rem;
+    padding: 10rem 5rem;
+
+    
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+
+
+    gap: 5rem;
+
+    .individualSkill {
+
+
+        h2 {
+            font-family: $montserrat;
+            font-weight: 400;
+            padding: 0 0 5px 10px;
+            position: relative;
+            margin-bottom: 25px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 60vw;
+                background: white;
+            }
+        }
+
+        .listOfSkills {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            width: 50vw;
+        }
+        
+        .skill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border: 1px solid $purple;
+            font-family: $montserrat;
+            background: transparent;
+            border-radius: 20px;
+            white-space: nowrap;
+            height: 30px;
+        }
+    }
+}
+
+
