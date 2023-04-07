@@ -5,7 +5,6 @@ import Nodejs from "../../../assets/nodejs-logo.png";
 import ReactLogo from "../../../assets/react-logo.png";
 import Proud from '../../../anim/Proud';
 
-
 function TopSkills() {
   const movingBoxRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLHeadingElement>(null);
