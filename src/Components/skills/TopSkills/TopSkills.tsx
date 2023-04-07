@@ -3,6 +3,7 @@ import './TopSkills.scss';
 import Firebase from "../../../assets/firebase-logo.png";
 import Nodejs from "../../../assets/nodejs-logo.png";
 import ReactLogo from "../../../assets/react-logo.png";
+import Proud from '../../../anim/Proud';
 
 
 function TopSkills() {
@@ -46,11 +47,8 @@ function TopSkills() {
 
       FE.classList.remove('feCardTransition');
       BE.classList.remove('beCardTransition');
-
     }
     
-
-
   },[])
 
   useEffect(() => {
@@ -62,6 +60,9 @@ function TopSkills() {
   return (
     <div className='topSkillsContainer'>
       <h3 ref={subtitleRef}>for the most recent projects i’ve been using </h3>
+      <div id="proudAnimContainer">
+        <Proud/>
+      </div>
       <div id="jsContainer" ref={movingBoxRef}>
 
         <div id="frontendBox" className='hiddenCard'>

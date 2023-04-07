@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { isStringValid, typingEffect } from '../../../const/utils';
 import "./Contact.scss";
 import emailjs from "emailjs-com";
+import Birdie from '../../../anim/Birdie';
 
 const TIMING_BETWEEN_WORDS = 1500;
 
@@ -64,6 +65,7 @@ function Contact() {
       <textarea placeholder="message" ref={textareaRef}
         onChange={(e) => setHasMessage(isStringValid(e.target.value))}>
       </textarea>
+      <Birdie/>
       <button type='submit'
         style={{
           'opacity': hasMessage ? '1' : '.2',

@@ -117,10 +117,18 @@
 }
 
 .feCardTransition{
-    transform: translateX(-100%);
+    transform: translateX(-150%);
 }
 
 .beCardTransition{
-    transform: translateX(100%) !important;
+    transform: translateX(150%) !important;
 
+}
+
+
+#proudAnimContainer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

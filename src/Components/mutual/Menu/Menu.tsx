@@ -47,7 +47,7 @@ const OpenedMenu = ({ closeMenu, changeState }: any) => {
 
     return <div className="menuContainer" style={{ 'opacity': isTransparent ? '0' : '1' }}>
         <button onClick={() => { openPage('') }}>Home</button>
-        {/* <button onClick={() => { openPage('about') }}>About</button> */}
+        <button onClick={() => { openPage('about') }}>About</button>
         <button onClick={() => { openPage('skills') }}>Skills</button>
         <button onClick={() => { openPage('projects') }}>Projects</button>
         {/* <button onClick={() => { openPage('/#contact') }}>Contact</button> */}
