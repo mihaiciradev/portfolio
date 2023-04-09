@@ -47,7 +47,8 @@ const OpenedMenu = ({ closeMenu, changeState }: any) => {
 
     return <div className="menuContainer" style={{ 'opacity': isTransparent ? '0' : '1' }}>
         <button onClick={() => { openPage('') }}>Home</button>
-        <button onClick={() => { openPage('about') }}>About</button>
+        <button onClick={() => { openPage('about') }}>About - the hooman</button>
+        <button onClick={() => { openPage('about-the-programmer') }}>About - the programmer</button>
         <button onClick={() => { openPage('skills') }}>Skills</button>
         <button onClick={() => { openPage('projects') }}>Projects</button>
         {/* <button onClick={() => { openPage('/#contact') }}>Contact</button> */}
@@ -62,11 +63,11 @@ function Menu() {
         if (isMenuOpened) {
             //then close it
 
-
             if (!buttonRef.current?.classList.contains('openedState')) return;
 
             buttonRef.current?.classList.remove('openedState');
             (document.getElementsByClassName('menuContainer')[0] as HTMLElement).style.opacity = "0";
+            document.body.style.overflowY = "visible";
             setTimeout(() => {
                 buttonRef.current?.classList.remove('intermediaryState');
                 setIsMenuOpened(false);

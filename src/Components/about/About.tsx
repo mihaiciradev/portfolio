@@ -7,13 +7,9 @@ import Gamer from '../../assets/Gamer';
 import Doggy from '../../assets/Doggy';
 import Sports from '../../assets/Sports';
 import Relax from '../../anim/Relax';
+import IconsOverlay from './IconsOverlay';
 
 const STEP = window.innerHeight / 1;
-
-const applyClass = (element: Element, className: string) => {
-  const classes = Array.from(element.classList);
-  if (!classes.includes(className)) element.classList.add(className);
-}
 
 function About() {
 
@@ -161,6 +157,7 @@ function About() {
 
         <Overall />
       </div>
+      <IconsOverlay/>
     </div>
   );
 }

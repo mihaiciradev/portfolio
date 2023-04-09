@@ -6,6 +6,7 @@ import Menu from './Components/mutual/Menu/Menu';
 import Home from './Components/home/Home';
 import Skills from './Components/skills/Skills';
 import About from './Components/about/About';
+import AboutIT from './Components/aboutIT/AboutIT';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/skills" element={<Skills/>}></Route>
         <Route path="/about" element={<About/>}></Route>
+        <Route path="/about-the-programmer" element={<AboutIT/>}></Route>
+
       </Routes>
     </div>
   );
