@@ -53,8 +53,6 @@ function AboutIT() {
     if (quarter > 3) quarter = 3;
 
     setActiveQuarter(quarter);
-
-    console.log(quarter);
   }, [])
 
   useEffect(() => {
