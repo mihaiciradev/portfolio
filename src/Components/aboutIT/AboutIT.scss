@@ -1,6 +1,5 @@
 @import "../../const/variables.scss";
 
-
 #moonContainer {
     // height: 300vh;
     position: relative;
@@ -10,12 +9,29 @@
         position: sticky;
         top: 10vh;
         left: 0;
-        width: 100%;
+        width: 99%;
         height: max-content;
 
-        svg {
+        @media only screen and (max-width: 1100px) {
+            width: 100vw;
+        }
+
+        &>svg {
             width: 100%;
+
             transform: scale(1.02);
+
+            &:first-of-type {
+
+                @media only screen and (max-width: 1100px) {
+                    // display: none;
+                    overflow-x: hidden;
+                    position: absolute;
+
+                    transform: scale(0);
+                }
+            }
+
         }
 
         .moonCircle {
@@ -29,14 +45,31 @@
             border: 5px solid $purple;
             background: white;
 
+
+            @media only screen and (max-width: 1100px) {
+                height: 60px;
+                width: 60px;
+            }
+
+            z-index: 100;
+
             display: flex;
             align-items: center;
             justify-content: center;
 
             transition: 300ms;
 
+            cursor: pointer;
+
             svg {
                 width: 40%;
+                transition: 300ms;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.3);
+                }
             }
         }
 
@@ -47,15 +80,26 @@
 
             .moonCircle:nth-of-type(1) {
                 transform: translateX(-280%) translateY(-40px) scale(.6);
+
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
             }
 
             .moonCircle:nth-of-type(2) {
                 transform: translateX(-180%) translateY(-60px) scale(.6);
 
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
+
+
             }
 
             .moonCircle:nth-of-type(3) {
                 transform: translateX(-50%) translateY(-70px) scale(1);
+                pointer-events: none;
+
             }
         }
 
@@ -66,14 +110,24 @@
 
             .moonCircle:nth-of-type(1) {
                 transform: translateX(-180%) translateY(-60px) scale(.6);
+
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
             }
 
             .moonCircle:nth-of-type(2) {
                 transform: translateX(-50%) translateY(-70px) scale(1);
+                pointer-events: none;
+
             }
 
             .moonCircle:nth-of-type(3) {
                 transform: translateX(80%) translateY(-60px) scale(.6);
+
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
             }
         }
 
@@ -84,15 +138,23 @@
 
             .moonCircle:nth-of-type(1) {
                 transform: translateX(-50%) translateY(-70px) scale(1);
-
+                pointer-events: none;
             }
 
             .moonCircle:nth-of-type(2) {
                 transform: translateX(80%) translateY(-60px) scale(.6);
+
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
             }
 
             .moonCircle:nth-of-type(3) {
                 transform: translateX(180%) translateY(-40px) scale(.6);
+
+                @media only screen and (max-width: 1100px) {
+                    opacity: .1;
+                }
 
             }
         }
@@ -104,8 +166,17 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            z-index: 10;
+
+
+            @media only screen and (max-width: 1100px) {
+                top: 0;
+                padding-top: 160px;
+            }
+
 
             &>div {
+                margin-top: 70px;
                 position: absolute;
                 opacity: 0;
                 transition: 300ms;
@@ -120,17 +191,42 @@
                 gap: 100px;
                 width: 100%;
 
+                @media only screen and (max-width: 1100px) {
+                    gap: 30px;
+                }
+
                 &>div {
                     display: flex;
                     align-items: center;
+                    flex-wrap: wrap;
                     justify-content: space-evenly;
                     width: 100%;
+
+                    @media only screen and (max-width: 1100px) {
+                        max-width: 80vw;
+                        gap: 30px;
+
+                        justify-content: start;
+
+                    }
 
                     &>div {
                         // width: 300px;
                         align-items: center;
                         justify-content: space-evenly;
                         flex-direction: column;
+                        position: relative;
+                        padding-left: 20px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 2px;
+                            height: 100%;
+                            left: 10px;
+                            top: 0;
+                            background: white;
+                        }
 
                         h4 {
                             text-decoration: underline;
@@ -163,25 +259,33 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
         img {
             width: 250px;
         }
-        div{
+
+        div {
             transform: translateY(-50%);
         }
     }
 
-    #textContainer{
+    #textContainer {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: 5vh;
-        p{
-        
+
+        @media only screen and (max-width: 1100px) {
+            margin-bottom: 20vh;
+        }
+
+        p {
+
             padding: 10px 0 10px 10px;
             width: 40vw;
-            &::before{
+
+            &::before {
                 content: '';
                 position: absolute;
                 width: 2px;
@@ -190,15 +294,26 @@
                 top: 0;
                 background: white;
             }
-            b{
+
+            b {
                 color: $purple;
             }
         }
-        p:nth-of-type(2n){
+
+        p:nth-of-type(2n) {
             transform: translate(10vw);
         }
-        p:nth-of-type(2n+1){
+
+        p:nth-of-type(2n+1) {
             transform: translate(-10vw);
+        }
+
+
+        @media only screen and (max-width: 1100px) {
+            p {
+                width: 60vw;
+                transform: translate(0) !important;
+            }
 
         }
     }

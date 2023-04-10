@@ -9,6 +9,29 @@
 
     gap: 4rem;
 
+    @media only screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+        margin-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+
+        .bioText {
+            padding: 0 15px 0 20px;
+            height: max-content;
+            margin: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                left: 10px;
+                top: 0;
+                background: white;
+            }
+        }
+    }
+
     &>.bioText,
     &>div {
         width: 30rem;
@@ -16,6 +39,7 @@
         transition: 500ms;
         font-family: $montserrat;
         line-height: 140%;
+
         p,
         ul,
         li {
@@ -29,6 +53,10 @@
         height: 100%;
         background: white;
         position: relative;
+
+        @media only screen and (max-width: 1100px) {
+            display: none;
+        }
 
         &::before {
             content: '';
@@ -45,9 +73,17 @@
         position: absolute;
         top: -1px;
         right: 0;
+
+        @media only screen and (max-width: 1100px) {
+            display: none;
+        }
     }
 
     .aboutMoreContainer {
+        @media only screen and (max-width: 1100px) {
+            display: none;
+        }
+
         position: absolute;
         left: 85%;
         bottom: 0;

@@ -59,6 +59,7 @@ const notFoundSvg = <svg width="724" height="481" viewBox="0 0 724 481" fill="no
 function App() {
   return (
     <div className="App">
+      
       <Menu />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -68,7 +69,7 @@ function App() {
         <Route path="/about-the-programmer" element={<AboutIT />}></Route>
         <Route path="*" element={<div id="four04">
           <h1>There's nothing here...</h1>
-        
+
           {notFoundSvg}
 
         </div>} />

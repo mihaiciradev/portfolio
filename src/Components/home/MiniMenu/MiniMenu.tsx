@@ -37,17 +37,6 @@ function MiniMenu() {
         }
       }
     }, 250)
-
-    // setTimeout(()=>{
-    //   if(buttonElement.style.opacity === ''){
-    //     console.log(buttonElement.style);
-    //     top_1.classList.remove('top-1-active');
-    //     top_2.classList.remove('top-2-active');
-
-    //     bottom_1.classList.remove('bottom-1-active');
-    //     bottom_2.classList.remove('bottom-2-active');
-    //   }
-    // },500)
   }
 
   return <div className='miniMenuContainer'>

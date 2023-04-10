@@ -39,11 +39,14 @@
 
             padding-top: 100px;
 
+
             .text {
                 position: absolute;
                 top: 0;
                 left: 0;
-
+                @media only screen and (max-width: 1100px) {
+                    flex-wrap: wrap;
+                }
                 display: flex;
                 align-items: center;
                 justify-content: center;

@@ -75,18 +75,22 @@ const TwSvg = () => {
 function SocialMedia() {
 
     const redirectTo = (id: string) => {
-        console.log(id);
-        return;
+        
         switch (id) {
             case 'FbSvg':
+                window.open('https://www.facebook.com/mihai.cira.7', '_blank');
                 break;
             case 'GhSvg':
+                window.open('https://github.com/mihaicira', '_blank');
                 break;
             case 'LinSvg':
+                window.open('https://www.linkedin.com/in/mihaicira/', '_blank');
                 break;
             case 'MailSvg':
+                window.location.href = "mailto:mihai.cira.dev@gmail.com";
                 break;
             case 'TwSvg':
+                window.open('https://twitter.com/mihai291291', '_blank');
                 break;
         }
     }

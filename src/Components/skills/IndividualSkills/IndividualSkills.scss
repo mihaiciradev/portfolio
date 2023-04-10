@@ -4,17 +4,22 @@
     margin-top: 3rem;
     padding: 10rem 5rem;
 
-    
+
     display: flex;
     align-items: baseline;
     justify-content: center;
     flex-direction: column;
 
+    @media only screen and (max-width: 1100px) {
+        margin-top: 50vh;
+        padding: 10rem 1rem;
+    }
+
 
     gap: 5rem;
 
-    .individualSkill {
 
+    .individualSkill {
 
         h2 {
             font-family: $montserrat;
@@ -40,8 +45,13 @@
             align-items: center;
             justify-content: flex-start;
             width: 50vw;
+
+            @media only screen and (max-width: 1100px) {
+                width: 100%;
+
+            }
         }
-        
+
         .skill {
             display: inline-flex;
             align-items: center;
@@ -58,5 +68,3 @@
         }
     }
 }
-
-

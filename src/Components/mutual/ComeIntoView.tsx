@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import useIsMobile from '../../hooks/useIsMobile';
 
 type ComeIntoViewTypes = {
     fromLeft?: boolean
@@ -6,6 +7,7 @@ type ComeIntoViewTypes = {
 
 function ComeIntoView(props: React.PropsWithChildren<ComeIntoViewTypes>) {
     const wrapperRef = useRef<any>(null)
+    const isMobile = useIsMobile();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkScroll = () => {
@@ -13,19 +15,17 @@ function ComeIntoView(props: React.PropsWithChildren<ComeIntoViewTypes>) {
         const element = wrapperRef.current;
         const parentOffsetTop = element.offsetParent.offsetTop;
 
-        if (scrollY * 1.7 > parentOffsetTop) {
+        if (scrollY * 1.7 > parentOffsetTop || isMobile) {
             element.style.transform = "translateX(0)";
             element.style.opacity = "1";
-            // setTimeout(() => {
-            //     element.style.display = "block";
-            // }, 200)
+            element.style.display = "block";
         }
         else {
             element.style.transform = `translateX(${props.fromLeft ? '-50px' : '50px'})`;
             element.style.opacity = "0";
-            // setTimeout(() => {
-            //     element.style.display = "none";
-            // }, 200)
+            setTimeout(() => {
+                element.style.display = "none";
+            }, 300)
         }
     }
 

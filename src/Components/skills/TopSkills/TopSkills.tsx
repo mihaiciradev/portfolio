@@ -4,13 +4,16 @@ import Firebase from "../../../assets/firebase-logo.png";
 import Nodejs from "../../../assets/nodejs-logo.png";
 import ReactLogo from "../../../assets/react-logo.png";
 import Proud from '../../../anim/Proud';
+import useIsMobile from '../../../hooks/useIsMobile';
 
 function TopSkills() {
   const movingBoxRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLHeadingElement>(null);
 
-  
-  const checkScroll = useCallback(() =>{
+  const isMobile = useIsMobile();
+
+  const checkScroll = useCallback(() => {
+    if (isMobile) return;
 
     const container = (document.getElementsByClassName('topSkillsContainer')[0] as HTMLElement);
     const containerBottomPosition = container.offsetHeight + container.offsetTop;
@@ -18,19 +21,19 @@ function TopSkills() {
     const marginOfError = 10; // px
     const scrollingEndBorder = containerBottomPosition - (movingBoxRef.current as HTMLElement).offsetHeight - marginOfError
 
-    if(!movingBoxRef.current || !subtitleRef.current) return;
+    if (!movingBoxRef.current || !subtitleRef.current) return;
 
-    if(subtitleRef.current.offsetTop < movingBoxRef.current.offsetTop - (marginOfError * 2)){
-      subtitleRef.current.style.transform = `translateY(${window.scrollY/2}px)`;
-      subtitleRef.current.style.letterSpacing = `${window.scrollY/80}px`;
+    if (subtitleRef.current.offsetTop < movingBoxRef.current.offsetTop - (marginOfError * 2)) {
+      subtitleRef.current.style.transform = `translateY(${window.scrollY / 2}px)`;
+      subtitleRef.current.style.letterSpacing = `${window.scrollY / 80}px`;
     }
 
 
     const FE = movingBoxRef.current.children[0];
     const BE = movingBoxRef.current.children[1];
 
-    if((movingBoxRef.current as HTMLElement).offsetTop >= scrollingEndBorder){
-      if(!Array.from(FE.classList).includes('hiddenCard')) return;
+    if ((movingBoxRef.current as HTMLElement).offsetTop >= scrollingEndBorder) {
+      if (!Array.from(FE.classList).includes('hiddenCard')) return;
 
       FE.classList.remove('hiddenCard');
       BE.classList.remove('hiddenCard');
@@ -38,8 +41,8 @@ function TopSkills() {
       FE.classList.add('feCardTransition');
       BE.classList.add('beCardTransition');
     }
-    else{
-      if(Array.from(FE.classList).includes('hiddenCard')) return;
+    else {
+      if (Array.from(FE.classList).includes('hiddenCard')) return;
 
       FE.classList.add('hiddenCard');
       BE.classList.add('hiddenCard');
@@ -47,20 +50,21 @@ function TopSkills() {
       FE.classList.remove('feCardTransition');
       BE.classList.remove('beCardTransition');
     }
-    
-  },[])
+
+  }, [])
 
   useEffect(() => {
-    document.addEventListener('scroll', checkScroll);
+    if (!isMobile)
+      document.addEventListener('scroll', checkScroll);
 
-    return () => { document.removeEventListener('scroll', checkScroll) }
-}, [checkScroll])
+    return () => { if (!isMobile) document.removeEventListener('scroll', checkScroll) }
+  }, [checkScroll])
 
   return (
     <div className='topSkillsContainer'>
       <h3 ref={subtitleRef}>for the most recent projects i’ve been using </h3>
       <div id="proudAnimContainer">
-        <Proud/>
+        <Proud />
       </div>
       <div id="jsContainer" ref={movingBoxRef}>
 
