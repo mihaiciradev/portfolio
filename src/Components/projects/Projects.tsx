@@ -39,7 +39,6 @@ function Projects() {
     if (quarter > 2) return;
 
     setActiveQuarter(quarter);
-    console.log(quarter)
   }, [])
 
   useEffect(() => {

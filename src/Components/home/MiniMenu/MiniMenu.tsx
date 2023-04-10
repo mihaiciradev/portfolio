@@ -1,6 +1,7 @@
 import React from 'react';
 import MiniMenuBar from '../../../anim/MiniMenuBar';
 import "./MiniMenu.scss";
+import { useNavigate } from 'react-router-dom';
 
 function MiniMenu() {
 
@@ -39,10 +40,12 @@ function MiniMenu() {
     }, 250)
   }
 
+  const navigate = useNavigate();
+
   return <div className='miniMenuContainer'>
     <span id="subtitle">View my</span>
     <div className='buttonsContainer'>
-      <button onMouseEnter={(e) => { handleAnimation(e, true) }} onMouseLeave={(e) => { handleAnimation(e, false) }}>
+      <button onMouseEnter={(e) => { handleAnimation(e, true) }} onMouseLeave={(e) => { handleAnimation(e, false) }} onClick={()=>{navigate('/skills'); window.scrollTo(0,0)}}>
         <div className="top-1"></div>
         <div className="top-2"></div>
 
@@ -52,7 +55,7 @@ function MiniMenu() {
         <div className="bottom-2"></div>
       </button>
       <MiniMenuBar />
-      <button onMouseEnter={(e) => { handleAnimation(e, true) }} onMouseLeave={(e) => { handleAnimation(e, false) }}>
+      <button onMouseEnter={(e) => { handleAnimation(e, true) }} onMouseLeave={(e) => { handleAnimation(e, false) }} onClick={()=>{navigate('/projects'); window.scrollTo(0,0)}}>
         <div className="top-1"></div>
         <div className="top-2"></div>
 

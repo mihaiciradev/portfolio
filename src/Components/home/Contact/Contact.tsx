@@ -34,24 +34,23 @@ function Contact() {
     const date = new Date();
 
     console.log(emailjs.send(
-      "service_c0zrve8",
-      "template_c6iu695",
+      "service_mp6ivzp",
+      "template_5zl57c2",
       {
         from: from,
         text: text,
         date: date.toString(),
       },
-      "Mpm1e_o9P8YhwFyNt"
+      "yh1_9AG1ypVSZEY_Y"
     ))
-    
-    console.log('sent')
+
 
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
     const from = inputRef.current?.value || 'none';
-    const message = inputRef.current?.value || 'none (error)';
+    const message = textareaRef.current?.value || 'none (error)';
 
     sendMessage(from, message);
     activateThankYou();
@@ -65,7 +64,7 @@ function Contact() {
       <textarea placeholder="message" ref={textareaRef}
         onChange={(e) => setHasMessage(isStringValid(e.target.value))}>
       </textarea>
-      <Birdie/>
+      <Birdie />
       <button type='submit'
         style={{
           'opacity': hasMessage ? '1' : '.2',

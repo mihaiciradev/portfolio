@@ -33,9 +33,6 @@ const badgeSvg = <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xml
 const MoonCircle = ({ svg, id }: { svg: any, id: number }) => {
 
   const click = (id: number) => {
-
-    console.log((id-1) * STEP);
-
     window.scrollTo(0,(id-1) * STEP)
   }
 

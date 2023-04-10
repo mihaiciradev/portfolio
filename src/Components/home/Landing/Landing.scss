@@ -75,8 +75,6 @@
         font-family: $montserrat;
         flex-wrap: wrap;
 
-        outline: 1px solid red;
-
         @media only screen and (max-width: 1100px) {
             display: none;
         }
@@ -85,7 +83,6 @@
         color: $purple;
 
         p {
-            outline: 1px solid blue;
             width: 15rem;
         }
     }

@@ -15,17 +15,14 @@ function ComeIntoView(props: React.PropsWithChildren<ComeIntoViewTypes>) {
         const element = wrapperRef.current;
         const parentOffsetTop = element.offsetParent.offsetTop;
 
-        if (scrollY * 1.7 > parentOffsetTop || isMobile) {
+        if (scrollY * 1.7 > parentOffsetTop || isMobile || window.innerWidth < 1100) {
             element.style.transform = "translateX(0)";
             element.style.opacity = "1";
-            element.style.display = "block";
         }
         else {
             element.style.transform = `translateX(${props.fromLeft ? '-50px' : '50px'})`;
             element.style.opacity = "0";
-            setTimeout(() => {
-                element.style.display = "none";
-            }, 300)
+           
         }
     }
 
