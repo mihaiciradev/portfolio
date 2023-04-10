@@ -148,7 +148,7 @@ function AboutIT() {
         <p>I'm a <b>programming enthusiast</b> who's always hungry for a new challenge to sink my teeth into. From the moment I laid my hands on my first programming language in high school, I knew I had found my passion. Since then, I've built a wide variety of programs ranging from Sudoku solvers to engaging games, utilizing both C++ and Python to their fullest potential.</p>
         <p> My dedication to computer science has led me to participate in the <b>Zero Robotics Competition</b> where my team and I qualified for the semi-finals. As if that wasn't enough, I've also had the pleasure of <b>teaching Python</b> to a group of 9th-grade students, igniting their curiosity for programming and sharing my love for the craft.</p>
         <p>But that's not all, I'm also a <b>web development enthusiast</b> with a keen eye for UI and UX design. I've had the opportunity to work on many university web projects as a <b>full-stack developer</b> and even led a team for a larger project. To me, the ultimate achievement in web development is creating an <b>application</b> that not only <b>looks good</b> but is <b>intuitive</b> and <b>functional</b>.</p>
-        <p>I'm a highly motivated and driven <b>computer science graduate</b> looking to further develop my skills and take on new challenges. With a passion for programming and web development, I'm excited to see what the future holds and what I can accomplish. 🚀🚀</p>
+        <p>I'm a highly motivated and driven <b>computer science graduate</b> looking to further develop my skills and take on new challenges. With a passion for programming and web development, I'm excited to see what the future holds and what I can accomplish 🚀🚀.</p>
       </div>
 
     </div>

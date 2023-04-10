@@ -190,6 +190,9 @@
                 top: 0;
                 background: white;
             }
+            b{
+                color: $purple;
+            }
         }
         p:nth-of-type(2n){
             transform: translate(10vw);
