@@ -59,7 +59,8 @@
         #birdie{
             position: absolute;
             right: 20px;
-            transform: translateY(-150%);
+            top: 0;
+            transform: translateY(25px);
             z-index: 3;
         }
     }

@@ -8,6 +8,7 @@ import Doggy from '../../assets/Doggy';
 import Sports from '../../assets/Sports';
 import Relax from '../../anim/Relax';
 import IconsOverlay from './IconsOverlay';
+import Fallback from "../../assets/about-loading-fallback.svg";
 
 const STEP = window.innerHeight / 1;
 
@@ -98,14 +99,25 @@ function About() {
 
 
   const HiThere = () => {
+    
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
     return (<div id="hiThereContainer">
 
       <div id="hiThere" ref={hiThere}>
         <h2>hi there</h2>
         <LilHand />
       </div>
+      {!isImageLoaded && (
+        <img src={Fallback} alt="Loading..." />
+      )}
 
-      <img src={MehoyUntold} alt="Mihai pic" />
+      <img
+        src={MehoyUntold}
+        alt="About"
+        onLoad={() => setIsImageLoaded(true)}
+        style={{ display: isImageLoaded ? 'inline-block' : 'none' }}
+      />
     </div>)
   }
 
@@ -149,7 +161,7 @@ function About() {
   }
 
   return (
-    <div className='aboutPage' style={{ "minHeight": `${STEP * 4}px` }}>
+    <div className='aboutPage' style={{ "minHeight": `${STEP * 5}px` }}>
       <div id="movingBox">
         <HiThere />
 
@@ -157,7 +169,7 @@ function About() {
 
         <Overall />
       </div>
-      <IconsOverlay/>
+      <IconsOverlay />
     </div>
   );
 }
