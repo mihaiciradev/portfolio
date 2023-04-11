@@ -27,6 +27,7 @@ function ComeIntoView(props: React.PropsWithChildren<ComeIntoViewTypes>) {
     }
 
     useEffect(() => {
+        checkScroll()
         document.addEventListener('scroll', checkScroll);
 
         return () => { document.removeEventListener('scroll', checkScroll) }

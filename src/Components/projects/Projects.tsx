@@ -142,7 +142,7 @@ function Projects() {
           link='react web-based appointment system website'
           mainImg={Remigoo}
           imgs={[Remigoo1,Remigoo2]}
-          role={['Team leader', 'Full-stack developer']}
+          role={['Team leader', 'Full-stack developer', 'Designer']}
           tech={['React', 'Typescript', 'Figma', 'Firebase', 'SASS']}
           text='It has been created in 2021-2022 by three students, a team which I led. Users can create their own accounts if they want to, book tickets to certain movies and visualize their history on their profile page.' />
       </div>

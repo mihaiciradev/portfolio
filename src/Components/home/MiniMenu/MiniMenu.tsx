@@ -21,8 +21,10 @@ function MiniMenu() {
       bottom_1.classList.add('bottom-1-active');
     }
     else {
-      top_2.classList.remove('top-2-active');
-      bottom_2.classList.remove('bottom-2-active');
+      setTimeout(()=>{
+        top_2.classList.remove('top-2-active');
+        bottom_2.classList.remove('bottom-2-active');
+      },250)
     }
 
 

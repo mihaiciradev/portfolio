@@ -23,6 +23,10 @@
         align-items: center;
         justify-content: space-evenly;
 
+        @media only screen and (max-width: 1100px) {
+            gap: 20px;
+        }
+
         button {
             position: relative;
             width: 30vw;
@@ -39,17 +43,17 @@
 
             opacity: .3;
 
-            &:hover{
+            &:hover {
                 opacity: 1;
                 letter-spacing: 4px;
             }
-            
+
             .top-1,
-            .bottom-1{
+            .bottom-1 {
                 width: 12rem;
             }
 
-            .top-1{
+            .top-1 {
                 position: absolute;
                 height: 1px;
                 background: white;
@@ -62,12 +66,12 @@
 
             }
 
-            .top-1-active{
+            .top-1-active {
                 transform: rotateY(0deg);
                 opacity: 1;
             }
 
-            .top-2{
+            .top-2 {
                 position: absolute;
                 height: 25%;
                 width: 1px;
@@ -80,12 +84,12 @@
                 transition: 300ms;
             }
 
-            .top-2-active{
+            .top-2-active {
                 transform: rotateX(0deg);
                 opacity: 1;
             }
 
-            .bottom-1{
+            .bottom-1 {
                 position: absolute;
                 height: 1px;
                 background: white;
@@ -96,13 +100,13 @@
                 opacity: 0;
                 transform-origin: right;
             }
-            
-            .bottom-1-active{
+
+            .bottom-1-active {
                 transform: rotateY(0deg);
                 opacity: 1;
             }
 
-            .bottom-2{
+            .bottom-2 {
                 position: absolute;
                 height: 25%;
                 width: 1px;
@@ -115,18 +119,18 @@
                 transition: 300ms;
             }
 
-            .bottom-2-active{
+            .bottom-2-active {
                 transform: rotateX(0deg);
                 opacity: 1;
             }
         }
-    
+
         @media only screen and (max-width: 1100px) {
-            svg{
+            svg {
                 display: none;
             }
 
-            button{
+            button {
                 background: $purple;
                 padding: 30px 10px;
                 border-radius: 15px;

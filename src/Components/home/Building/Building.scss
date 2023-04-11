@@ -3,9 +3,10 @@
 
 
 
-.buildingContainer{
+.buildingContainer {
     position: relative;
-    h1{
+
+    h1 {
         position: absolute;
         top: 5.7em;
         margin-left: 50%;
@@ -16,15 +17,30 @@
         letter-spacing: 3px;
     }
 }
-#buildingSection{
+
+#buildingSection {
     height: max-content;
-    transform: translateY(-2%);
+    transform: translateY(-1%);
     width: 100%;
+
     @media only screen and (max-width: 1100px) {
         display: none;
     }
 
-    #building-vertical-line{
+    #building-vertical-line {
         transform: translateX(.3%);
+    }
+
+    #traditional,
+    #scalable,
+    #serverless,
+    #responsive {
+        transform-box: fill-box;
+        transform-origin: center;
+        transition: 500ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
