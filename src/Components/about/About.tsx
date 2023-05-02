@@ -97,10 +97,15 @@ function About() {
   }, [checkScroll])
 
 
+  useEffect(() => {
+    document.title = "Mihai's portfolio • About me";
+  }, [])
+
+
 
   const HiThere = () => {
-    
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     return (<div id="hiThereContainer">
 

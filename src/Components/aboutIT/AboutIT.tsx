@@ -68,7 +68,11 @@ function AboutIT() {
     return () => { document.removeEventListener('scroll', checkScroll) }
   }, [checkScroll])
 
-
+  
+  useEffect(() => {
+    document.title = "Mihai's portfolio • The programmer";
+  }, [])
+  
 
   return (<div id="aboutITPage">
 

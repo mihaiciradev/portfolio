@@ -49,6 +49,12 @@ function Projects() {
     return () => { document.removeEventListener('scroll', checkScroll) }
   }, [checkScroll])
 
+    
+  useEffect(() => {
+    document.title = "Mihai's portfolio • Projects";
+  }, [])
+  
+
 
   type ProjectType = {
     title: string,
