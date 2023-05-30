@@ -90,7 +90,8 @@ function AboutIT() {
                 <p><b>Role:</b> Web developer</p>
                 <p><b>Company:</b> 3SS</p>
                 <p><b>from:</b> August 2022</p>
-                <p><b>to: present</b></p>
+                <p><b>to:</b> June 2023</p>
+
               </div>
 
               <div>
