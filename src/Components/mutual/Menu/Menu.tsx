@@ -76,7 +76,7 @@ const OpenedMenu = ({ closeMenu, changeState }: any) => {
       <a href="./about-the-programmer">About - the programmer 👨🏻‍💻 </a>
       <a href="./skills">Skills</a>
       <a href="./projects">Projects</a>
-      <a href="./published">Papers</a>
+      <a href="./published">Academic papers</a>
 
       {/* <button onClick={() => { openPage('/#contact') }}>Contact</button> */}
     </div>

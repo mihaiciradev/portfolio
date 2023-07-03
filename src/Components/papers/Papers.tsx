@@ -11,6 +11,18 @@ const PapersList = [
     authors: "Mihai Cîra",
   },
   {
+    title:
+      "Comparative Analysis of Clustering Algorithms: Insights from Healthcare Data",
+    link: "./papers/Healthcare.pdf",
+    authors: "Mihai Cîra",
+  },
+  {
+    title:
+      "Exploring Clustering Algorithms for Textual Data: A Comparative Study",
+    link: "./papers/Clustering.pdf",
+    authors: "Mihai Cîra",
+  },
+  {
     title: "Law of Large Numbers",
     link: "./papers/LawOfLargeNumbers.pdf",
     authors: "Mihai Cîra",
