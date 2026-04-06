@@ -78,7 +78,7 @@ function Papers() {
         {PapersList.map((p: any) => (
           <div className="paper">
             <span>{p.title}</span>
-            <a href={p.link} target="_blank">
+            <a href={p.link} target="_blank" rel="noreferrer">
               {window.location.origin}/{p.link.substring(2)}
             </a>
             <span>{p.authors}</span>

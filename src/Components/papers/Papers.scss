@@ -72,7 +72,7 @@
   #papersContainer {
     padding-top: 60vh;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin-left: 50%;
     transform: translate(-50%);
     width: max-content;
@@ -85,7 +85,7 @@
     .paper {
       width: max-content;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: center;
       flex-direction: column;
       position: relative;

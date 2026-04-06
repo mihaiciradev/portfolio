@@ -16,7 +16,6 @@ function About() {
 
   const hiThere = useRef<HTMLDivElement>(null);
 
-  const [active, setActive] = useState<number>(0);
   const slider = useRef<HTMLDivElement>(null);
   const overall = useRef<HTMLDivElement>(null);
 

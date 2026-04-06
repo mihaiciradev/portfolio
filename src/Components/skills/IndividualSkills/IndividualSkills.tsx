@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React from 'react';
 import './IndividualSkills.scss';
 
 const FrontendSkills = ['React', 'TypeScript', 'Next.js', 'JavaScript', 'HTML / CSS / SASS', 'Tailwind CSS', 'shadcn/ui', 'Material UI', 'React Query', 'Redux', 'React Router', 'WebSocket']

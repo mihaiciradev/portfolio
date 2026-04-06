@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Bike from '../../../anim/Bike';
-import LandingArrow from '../../../anim/LandingArrow';
 import LandingPicSquares from '../../../anim/LandingPicSquares';
-import { scrollSmoothTo, typingEffect } from '../../../const/utils';
+import { typingEffect } from '../../../const/utils';
 import './Landing.scss';
 
 

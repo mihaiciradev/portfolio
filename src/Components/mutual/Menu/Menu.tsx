@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Menu.scss";
 
 const ButtonSvg = () => {
@@ -49,22 +48,6 @@ const OpenedMenu = ({ closeMenu, changeState }: any) => {
       document.body.style.overflowY = "visible";
     };
   }, []);
-
-  const navigate = useNavigate();
-
-  const openPage = (id: string) => {
-    switch (id) {
-      case "":
-        navigate("/");
-        break;
-      default:
-        navigate("/" + id);
-        closeMenu(false);
-        break;
-    }
-    changeState();
-    window.scrollTo(0, 0);
-  };
 
   return (
     <div

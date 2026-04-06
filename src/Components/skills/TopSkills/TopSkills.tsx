@@ -51,14 +51,14 @@ function TopSkills() {
       BE.classList.remove('beCardTransition');
     }
 
-  }, [])
+  }, [isMobile])
 
   useEffect(() => {
     if (!isMobile)
       document.addEventListener('scroll', checkScroll);
 
     return () => { if (!isMobile) document.removeEventListener('scroll', checkScroll) }
-  }, [checkScroll])
+  }, [checkScroll, isMobile])
 
   return (
     <div className='topSkillsContainer'>
