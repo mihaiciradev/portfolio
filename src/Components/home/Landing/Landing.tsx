@@ -6,7 +6,7 @@ import { scrollSmoothTo, typingEffect } from '../../../const/utils';
 import './Landing.scss';
 
 
-const STRINGS = ["I am Mihai Cira.", "front end developer", "back end developer", "problem solver"];
+const STRINGS = ["I am Mihai Cira.", "React & TypeScript developer", "Next.js developer", "system architect", "problem solver"];
 const WORD_TIMEOUT = 2500;
 const LOOP = true;
 
@@ -29,8 +29,8 @@ function Landing() {
       <div className="landingLeftContainer">
         <h1 ref={titleRef}>{STRINGS[0]}</h1>
         <div className="landingDemoText">
-          <p>Web development enthusiast,  using the most <b>modern technologies</b></p>
-          <p>Trained and <b>certified</b> in the Scaled Agile Framework (<b>SAFe 5</b> Methodology)</p>
+          <p>Fullstack developer specialized in <b>React</b>, <b>TypeScript</b> and <b>Next.js</b></p>
+          <p>Lead developer · System architect · <b>SAFe 5</b> certified · Open to <b>B2B</b></p>
         </div>
       </div>
 

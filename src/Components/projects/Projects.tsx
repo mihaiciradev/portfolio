@@ -1,14 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./Projects.scss";
 import ProjectsSvg from "../../anim/ProjectsSvg";
-import CL from "../../assets/projects/CL.png";
-import CL1 from "../../assets/projects/CL1.png";
-import CL2 from "../../assets/projects/CL2.png";
-import ETH from "../../assets/projects/ETH_scoreboard.jpeg";
-import Figma from "../../assets/projects/portfolio-design.png";
-import Remigoo from "../../assets/projects/remigoo.png";
-import Remigoo1 from "../../assets/projects/remigoo1.png";
-import Remigoo2 from "../../assets/projects/remigoo2.png";
 
 const STEP = window.innerHeight / 3;
 
@@ -118,10 +110,10 @@ function Projects() {
         <div>
           <h3>projects</h3>
           <p>
-            Here is a list of the projects I have worked on, primarily during my
-            Bachelor's degree but not limited to that. Throughout these
-            projects, I have taken on multiple roles, including developer, team
-            leader, project manager, and designer.
+            A selection of projects I have built and shipped — ranging from
+            ML-powered platforms to production booking systems. Across these I
+            have acted as lead developer, system architect, team leader,
+            and designer.
           </p>
         </div>
       </div>
@@ -131,43 +123,44 @@ function Projects() {
         className={`${activeQuarter === 2 ? "visible" : ""}`}
       >
         <Project
-          title="Attack-Defense-Scoreboard"
-          link="Hackathon scoreboard page (click for github page)"
-          linkRef="https://github.com/Fineas/Attack-Defense-Scoreboard/tree/master"
-          mainImg={ETH}
-          role={["Frontend developer"]}
-          tech={["ReactJS", "Figma"]}
-          text="The page represents the scoreboard user interface for a hackathon called HackTM. Fetching the data from an API, the page shows the participants at the hackathon. Even though it has basic functionality, the opportunity to help an event such as a hackathon was exciting."
+          title="Get Me Hired"
+          link="Next.js & ML-powered job recommendation platform"
+          role={["Fullstack developer", "ML engineer"]}
+          tech={["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Python", "FastAPI", "XGBoost", "Sentence Transformers", "scikit-learn"]}
+          text="A full-stack web application that matches candidates with relevant job opportunities by semantically analysing the content of their CV. Users upload their CV through the browser; a FastAPI backend processes the PDF, generates semantic embeddings via a pre-trained transformer model, and returns a ranked list of personalised job recommendations. The model was trained on a corpus of over 200,000 real-world job descriptions across multiple industries."
         />
 
         <Project
-          title="Personal portfolio"
-          link="react application (you are already here)"
-          mainImg={Figma}
-          role={["everything 🤩"]}
-          tech={["React", "Typescript", "Figma", "SASS"]}
-          text="That is the website that you are currently visiting. The images attached represent the prototype. Check it out and compare it to the actual final application."
+          title="Travel agency internal booking app"
+          link="hotel reservation platform — React & TypeScript"
+          role={["Lead frontend developer", "System architect"]}
+          tech={["React", "TypeScript", "Redux", "React Query", "Material UI", "REST API", "Git"]}
+          text="A complex full-stack web application built for a French travel agency, enabling agents to search hotel availability, configure and price stays, and manage the full reservation lifecycle across multiple external providers. The frontend handles multi-step booking flows, real-time availability checks, dynamic pricing tables, and a booking modification system that synchronises changes across multiple third-party APIs. I led the frontend architecture, defined component and state-management patterns, collaborated closely with the backend team on API design, and was responsible for end-to-end delivery of several major features."
         />
 
         <Project
-          title="Classroom Laboratory"
-          link="educational website (click)"
-          linkRef="https://classroomlab.uvt.ro/"
-          mainImg={CL}
-          imgs={[CL1, CL2]}
-          role={["Full-stack developer", "Team leader"]}
-          tech={["HTML", "CSS", "Javascript", "jQuery"]}
-          text="Classroom Laboratory is a classroom where selected courses are taught, an infrastructure for conducting experiments in teaching and methodology methods, and finally an arena for collaboration between students, teachers, researchers and the world of work. It is a front-end website only, which I built alone, as a volunteer, for the Faculty of Sociology and Psychology (West University of Timișoara).When needed, I am called to update stuff on the website."
+          title="Ciuson"
+          link="business website & admin platform — Next.js"
+          role={["Fullstack developer", "Designer"]}
+          tech={["Next.js", "React", "TypeScript", "Firebase", "Google Authentication"]}
+          text="A Romanian vulcanisation business that transitioned from having no online presence to achieving constant website traffic and strong Google ranking. I designed and developed the application using Next.js with backend services powered by Google Firebase. The platform includes Google authentication, allowing the client to securely manage and update displayed pricing and business information. Delivered through direct client communication with continuous feedback, resulting in a significant improvement in online visibility and customer reach."
         />
 
         <Project
-          title="Remigoo"
-          link="react web-based appointment system website"
-          mainImg={Remigoo}
-          imgs={[Remigoo1, Remigoo2]}
-          role={["Team leader", "Full-stack developer", "Designer"]}
-          tech={["React", "Typescript", "Figma", "Firebase", "SASS"]}
-          text="It has been created in 2021-2022 by three students, a team which I led. Users can create their own accounts if they want to, book tickets to certain movies and visualize their history on their profile page."
+          title="Center of Francophone Studies"
+          link="serverless website platform (click)"
+          linkRef="https://csf.uvt.ro/"
+          role={["Team leader", "Fullstack developer"]}
+          tech={["HTML", "CSS", "JavaScript", "jQuery", "Firebase"]}
+          text="A complex online platform for the Center of Francophone Studies at West University of Timișoara, developed through a partnership between two faculties. I led a team of six to build a role-based user account system and automate processes previously handled manually. The platform serves researchers and staff working in the field of francophonie from the perspective of interculturality and interdisciplinarity."
+        />
+
+        <Project
+          title="Guildhall"
+          link="web-based company management tool"
+          role={["Fullstack developer"]}
+          tech={["React", "TypeScript", "Elixir", "PostgreSQL", "Git", "Google Calendar API"]}
+          text="A company PTO management application built during an internship at Crafting Software. The app tracks paid time off for employees and integrates directly with the Google Calendar API. I worked across both the React frontend and Elixir backend in a seven-person team with daily standups and weekly demos."
         />
       </div>
     </div>

@@ -87,25 +87,31 @@ function AboutIT() {
             <h3>Work history</h3>
             <div>
               <div>
+                <p><b>Role:</b> Lead Developer (React &amp; TypeScript)</p>
+                <p><b>Company:</b> undisclosed</p>
+                <p><b>from:</b> October 2023</p>
+                <p><b>to:</b> present</p>
+              </div>
+
+              <div>
                 <p><b>Role:</b> Web developer</p>
                 <p><b>Company:</b> 3SS</p>
                 <p><b>from:</b> August 2022</p>
                 <p><b>to:</b> June 2023</p>
-
               </div>
 
               <div>
-                <p><b>Role:</b> Web developer (internship)</p>
+                <p><b>Role:</b> Fullstack developer (internship)</p>
                 <p><b>Company:</b> Crafting Software</p>
                 <p><b>from:</b> February 2022</p>
                 <p><b>to:</b> May 2022</p>
               </div>
 
               <div>
-                <p><b>Role:</b> Mobile developer (internship)</p>
+                <p><b>Role:</b> iOS mobile developer (internship)</p>
                 <p><b>Company:</b> [e-spres-oh]</p>
-                <p><b>from:</b> November 2019</p>
-                <p><b>to:</b> January 2020</p>
+                <p><b>from:</b> September 2020</p>
+                <p><b>to:</b> December 2020</p>
               </div>
             </div>
           </div>
@@ -118,7 +124,7 @@ function AboutIT() {
                 <p><b>Specialization:</b> Big data - data science, analytics and technologies</p>
                 <p><b>University:</b> West University of Timișoara</p>
                 <p><b>from:</b> September 2022</p>
-                <p><b>to: present</b></p>
+                <p><b>to:</b> July 2025</p>
               </div>
 
               <div>
@@ -138,6 +144,14 @@ function AboutIT() {
                 <p><b>city:</b> Timișoara</p>
                 <p><b>availability:</b> from anywhere</p>
                 <p><b>way of working:</b> remote / hybrid / on-site</p>
+                <p><b>contract:</b> open to B2B</p>
+              </div>
+
+              <div>
+                <h4>Languages</h4>
+                <p><b>Romanian</b> — native</p>
+                <p><b>English</b> — C2</p>
+                <p><b>Spanish</b> — B2</p>
               </div>
             </div>
           </div>
@@ -153,10 +167,10 @@ function AboutIT() {
       </div>
 
       <div id='textContainer'>
-        <p>I'm a <b>programming enthusiast</b> who's always hungry for a new challenge to sink my teeth into. From the moment I laid my hands on my first programming language in high school, I knew I had found my passion. Since then, I've built a wide variety of programs ranging from Sudoku solvers to engaging games, utilizing both C++ and Python to their fullest potential.</p>
-        <p> My dedication to computer science has led me to participate in the <b>Zero Robotics Competition</b> where my team and I qualified for the semi-finals. As if that wasn't enough, I've also had the pleasure of <b>teaching Python</b> to a group of 9th-grade students, igniting their curiosity for programming and sharing my love for the craft.</p>
-        <p>But that's not all, I'm also a <b>web development enthusiast</b> with a keen eye for UI and UX design. I've had the opportunity to work on many university web projects as a <b>full-stack developer</b> and even led a team for a larger project. To me, the ultimate achievement in web development is creating an <b>application</b> that not only <b>looks good</b> but is <b>intuitive</b> and <b>functional</b>.</p>
-        <p>I'm a highly motivated and driven <b>computer science graduate</b> looking to further develop my skills and take on new challenges. With a passion for programming and web development, I'm excited to see what the future holds and what I can accomplish 🚀🚀.</p>
+        <p>I'm a <b>fullstack web developer</b> specialized in <b>React</b>, <b>TypeScript</b> and <b>Next.js</b>, with strong experience in designing and building scalable, real-time web applications. Over the last two years I have been actively involved in a complex production system where I owned <b>front-end architecture</b>, contributed to <b>system design</b>, and coordinated development across frontend and backend teams.</p>
+        <p>I am a proactive and reliable team member, known primarily for strong <b>problem-solving skills</b>, clear technical communication, and the ability to translate business requirements into clean, maintainable solutions. I work comfortably with <b>RESTful APIs</b>, modern tooling, and <b>Agile</b> processes, while keeping a constant focus on code quality, performance, and long-term maintainability.</p>
+        <p>My roots in computer science go back to high school, where I competed in the <b>Zero Robotics Competition</b> and later taught <b>Python</b> to 9th-grade students. I hold a Bachelor's in Computer Science and a Master's in Big Data &amp; Data Science from <b>West University of Timișoara</b>. I also participated in <b>Oxford Hack 2022</b> at the University of Oxford.</p>
+        <p>Beyond code, I hold a <b>SAFe 5 Practitioner</b> certification and have shipped products ranging from ML-powered platforms to full-stack booking systems for French travel agencies. I care deeply about the craft — building things that not only <b>work reliably</b> but are <b>a pleasure to use</b> 🚀</p>
       </div>
 
     </div>

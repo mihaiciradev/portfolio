@@ -6,9 +6,14 @@ const STEP = window.innerHeight / 4;
 
 const PapersList = [
   {
-    title: "Walmart Sales Forecast",
-    link: "./papers/Walmart_Sales_Forecast.pdf",
+    title: "Law of Large Numbers",
+    link: "./papers/LawOfLargeNumbers.pdf",
     authors: "Mihai Cîra",
+  },
+  {
+    title: "Chaotic Boltzmann Machines",
+    link: "./papers/ChaoticBoltzmann.pdf",
+    authors: "Mihai Cîra, Alex Măcrescu",
   },
   {
     title:
@@ -20,21 +25,6 @@ const PapersList = [
     title:
       "Exploring Clustering Algorithms for Textual Data: A Comparative Study",
     link: "./papers/Clustering.pdf",
-    authors: "Mihai Cîra",
-  },
-  {
-    title: "Law of Large Numbers",
-    link: "./papers/LawOfLargeNumbers.pdf",
-    authors: "Mihai Cîra",
-  },
-  {
-    title: "Chaotic Boltzmann Machines",
-    link: "./papers/ChaoticBoltzmann.pdf",
-    authors: "Mihai Cîra, Alex Măcrescu",
-  },
-  {
-    title: "Ethical Analysis",
-    link: "./papers/EthicalAnalysis.pdf",
     authors: "Mihai Cîra",
   },
 ];

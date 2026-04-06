@@ -62,17 +62,18 @@ function TopSkills() {
 
   return (
     <div className='topSkillsContainer'>
-      <h3 ref={subtitleRef}>for the most recent projects i’ve been using </h3>
+      <h3 ref={subtitleRef}>my core stack for production applications </h3>
       <div id="proudAnimContainer">
         <Proud />
       </div>
       <div id="jsContainer" ref={movingBoxRef}>
 
         <div id="frontendBox" className='hiddenCard'>
-          <h2>Javascript</h2>
+          <h2>TypeScript</h2>
           <span>front-end development</span>
           <div className='jsContainerTech'>
             <h3>REACT</h3>
+            <h3>NEXT.JS</h3>
           </div>
           <div className='jsContainerImg'>
             <img src={ReactLogo} id='react-logo' alt='react-logo' />
@@ -80,11 +81,11 @@ function TopSkills() {
         </div>
 
         <div id="backendBox" className='hiddenCard'>
-          <h2>Javascript</h2>
-          <span>back-end development</span>
+          <h2>TypeScript</h2>
+          <span>back-end & infrastructure</span>
           <div className='jsContainerTech'>
             <h3>NODEJS</h3>
-            <h3>FIREBASE</h3>
+            <h3>DOCKER</h3>
           </div>
           <div className='jsContainerImg'>
             <img src={Nodejs} id='nodejs-logo' alt='nodejs-logo' />

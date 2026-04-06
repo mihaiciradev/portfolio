@@ -86,8 +86,6 @@
         opacity: 0;
         transition: 600ms;
 
-        outline: 1px solid red;
-
         &.visible {
             z-index: 1;
             opacity: 1;
